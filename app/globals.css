@@ -1,26 +1,27 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* Di Tailwind v4, kita gunakan @theme untuk mendefinisikan variabel.
+  Ini otomatis membuat utility class:
+  - bg-primary, text-primary, border-primary
+  - bg-background, text-background
+  - bg-foreground, text-foreground
+*/
+@theme {
+  --color-primary: #FF5722;
+  --color-background: #FFFFFF;
+  --color-foreground: #1F2937;
+  
+  /* Font default dari import/Google Fonts bisa didefinisikan di sini juga jika perlu */
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  html {
+    scroll-behavior: smooth;
   }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  
+  body {
+    /* Sekarang 'bg-background' sudah dikenali karena ada di @theme */
+    @apply bg-background text-foreground antialiased;
+  }
 }
