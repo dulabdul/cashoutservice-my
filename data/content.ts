@@ -1,6 +1,6 @@
 export const SITE_CONFIG = {
   name: "CashoutSPayLater",
-  whatsappNumber: "60104292559", // Ganti dengan nomor WA asli (format 60...)
+  whatsappNumber: "601164499153", // Ganti dengan nomor WA asli (format 60...)
 };
 
 export const CONTENT = {
