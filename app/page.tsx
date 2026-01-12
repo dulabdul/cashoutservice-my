@@ -13,7 +13,7 @@ export default function Home() {
     name: 'CashoutSPayLater Malaysia',
     image: 'https://cashoutspaylater.my/images/logo.png',
     description:
-      'Perkhidmatan pencairan limit kredit ShopeePay Later dan Grab PayLater menjadi tunai segera.',
+      'Perkhidmatan pencairan limit kredit ShopeePay Later menjadi tunai segera.',
     address: {
       '@type': 'PostalAddress',
       addressCountry: 'MY',
@@ -43,7 +43,7 @@ export default function Home() {
       },
     ],
     currenciesAccepted: 'MYR',
-    paymentAccepted: 'Cash, Credit Card, ShopeePay, GrabPay',
+    paymentAccepted: 'Cash, Credit Card, ShopeePay',
   };
   return (
     <>
